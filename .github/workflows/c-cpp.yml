@@ -10,13 +10,14 @@ jobs:
   build:
 
     runs-on: windows-latest
-    defaults:
-    run:
-      shell: msys2bash.cmd {0}
+#    defaults:
+#    run:
+#      shell: msys2bash.cmd {0}
 
 
     steps:
     - uses: actions/checkout@v2
+      shell: msys2bash.cmd {0}
     - name: autogen.sh
       run: ./autogen.sh
     - name: configure
