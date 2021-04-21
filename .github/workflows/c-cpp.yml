@@ -17,11 +17,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      shell: msys2bash.cmd {0}
-    - name: autogen.sh
+    - uses: msys2/setup-msys2@v2
+    - shell: msys2 {0}
       run: ./autogen.sh
-    - name: configure
+    - shell: msys2 {0}
       run: ./configure
-    - name: make
+    - shell: msys2 {0}
       run: make
     
