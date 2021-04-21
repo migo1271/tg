@@ -9,7 +9,11 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+    defaults:
+    run:
+      shell: msys2bash.cmd {0}
+
 
     steps:
     - uses: actions/checkout@v2
