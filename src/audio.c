@@ -265,7 +265,7 @@ int set_audio_device(int device, int *nominal_sr, double *real_sr, int hpf_freq,
 			break;
 		if (err != paDeviceUnavailable)
 			goto error;
-		usleep(500000);
+		_sleep(500000);
 	}
 	if(!n)
 		goto error;
